@@ -60,8 +60,8 @@ export default function Register() {
       <input ref={emailRef} type="text" placeholder="email" />
       <input ref={roleRef} type="text" placeholder="role" />
       <button onClick={handleRegister}>Invite</button>
-      <button onClick={handleHome}>Home</button>
       <button onClick={handleUpdate}>Update</button>
+      <button onClick={handleHome}>Home</button>
     </div>
   );
 }

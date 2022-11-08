@@ -35,6 +35,7 @@ export default function Tags() {
     <div>
         <h1>Tags</h1>
         <Tag tags={tags} />
+        <h3>Create a Tag</h3>
         <button onClick={handleCreateTag}>Create Tag</button>
         <button onClick={handleHome}>Home</button>
     </div>

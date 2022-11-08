@@ -34,6 +34,11 @@ export default function Categories() {
     navigate("/addword");
   }
 
+  function handleSignOut() {
+    localStorage.removeItem(LOCAL_STORAGE_KEY);
+    navigate("/");
+  }
+
   return (
     <div>
       <h1>Categories</h1>
@@ -41,6 +46,7 @@ export default function Categories() {
       <Category catData={catData} />
       <button onClick={handleAddWord}>Add Word</button>
       <button onClick={handleTags}>View Tags</button>
+      <button onClick={handleSignOut}>Sign Out</button>
     </div>
   );
 }
