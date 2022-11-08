@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import axios from "axios";
-import { getSuggestedQuery } from "@testing-library/react";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
   const nameRef = useRef();
@@ -8,6 +8,11 @@ export default function Register() {
   const emailRef = useRef();
   const roleRef = useRef();
   const LOCAL_STORAGE_KEY = "token";
+  let navigate = useNavigate();
+
+  function handleHome() {
+    navigate("/home");
+  }
 
   function handleRegister() {
     const name = nameRef.current.value;
@@ -21,12 +26,12 @@ export default function Register() {
     axios
       .post(
         "https://edeaf-api-staging.azurewebsites.net/v1/admin/Users",
-        qs.stringify({
-          name: name,
-          surname: surname,
-          email: email,
-          role: role,
-        }),
+        {
+            name: name,
+            surname: surname,
+            email: email,
+            role: role,
+          },
         {
           headers: {
             Authorization:
@@ -43,6 +48,10 @@ export default function Register() {
       });
   }
 
+  function handleUpdate(){
+    navigate("/update");
+  }
+
   return (
     <div>
       <h1>Invite user</h1>
@@ -51,6 +60,8 @@ export default function Register() {
       <input ref={emailRef} type="text" placeholder="email" />
       <input ref={roleRef} type="text" placeholder="role" />
       <button onClick={handleRegister}>Invite</button>
+      <button onClick={handleHome}>Home</button>
+      <button onClick={handleUpdate}>Update</button>
     </div>
   );
 }

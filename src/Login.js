@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./Login.css";
 
 export default function Login() {
   const [user, setUser] = useState("");
@@ -46,7 +47,7 @@ export default function Login() {
       <h1>Sign in</h1>
       <input ref={loginEmailRef} type="text" placeholder="email" />
       <input ref={passRef} type="password" placeholder="Password" />
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleLogin} className="my-2 px-4 py-2 border-2 border-blue-500 rounded-md bg-blue-400">Login</button>
     </div>
   );
 }
