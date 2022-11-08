@@ -8,6 +8,7 @@ export default function EditTag() {
   const colorRef = useRef();
   let navigate = useNavigate();
 
+///// Edit tag does not work.  The tag is not updated.
   function handleUpdate() {
     console.log(tag.id);
     axios
