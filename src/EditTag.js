@@ -13,7 +13,7 @@ export default function EditTag() {
     console.log(tag.id);
     axios
       .put(
-        "https://edeaf-api-staging.azurewebsites.net/admin/Tags/" + tag.id,
+        "https://edeaf-api-staging.azurewebsites.net/v1/admin/Tags/" + tag.id,
         {
           name: nameRef.current.value,
           color: colorRef.current.value,
