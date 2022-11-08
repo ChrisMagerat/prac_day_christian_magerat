@@ -40,7 +40,7 @@ export default function Categories() {
       <h3>You can click on the different categories</h3>
       <Category catData={catData} />
       <button onClick={handleAddWord}>Add Word</button>
-      <button onClick={handleTags}>Tags</button>
+      <button onClick={handleTags}>View Tags</button>
     </div>
   );
 }

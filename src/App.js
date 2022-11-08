@@ -6,6 +6,7 @@ import Words from './Words';
 import Tags from './Tags';
 import AddWord from './AddWord';
 import EditTag from './EditTag';
+import CreateTag from './CreateTag';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/tags" element={<Tags />} />
           <Route path="/addword" element={<AddWord />} />
           <Route path="/edittag" element={<EditTag />} />
+          <Route path="/createtag" element={<CreateTag />} />
         </Routes>
       </BrowserRouter>
     </div>

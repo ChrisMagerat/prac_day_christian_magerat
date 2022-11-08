@@ -14,6 +14,7 @@ export default function PrintTag({tag}) {
         })
         .then((response) => {
             console.log(response);
+            navigate('/tags');
         })
         .catch((error) => {
             console.log(error);
